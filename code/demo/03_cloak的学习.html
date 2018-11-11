@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../lib/vue-2.4.0.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="button" value="弹窗" @click='change'>
+		<p v-cloak>{{ msg }}</p>
+		<p v-html='msg2'></p>
+	</div>	
+
+
+	<script>
+			var vm = new Vue({
+			el:'#app',
+			data:{
+				msg : '这是第一个',
+				msg1 : '这是第二个',
+				msg3 :'这是三号',
+				msg2: '<h1>0066666</h>'	
+			},
+			methods: {
+				change(){
+					alert('hello')
+				}
+			}
+		})
+	</script>
+</body>
+</html>
