@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script src="lib/vue-2.4.0.js"></script>
+</head>
+
+<body>
+        <div id="app">
+
+
+                <input type="button" value="ddd" @click="app">
+
+                <ul v-model>
+                        <li v-for="msg in list"> {{ msg }}</li>
+                </ul>
+        </div>
+        <script>
+                var vm = new Vue({
+                        el: '#app',
+                        data: {
+                                list: [{
+                                                text: '学习 JavaScript'
+                                        },
+                                        {
+                                                text: '学习 Vue'
+                                        },
+                                        {
+                                                text: '整个牛项目'
+                                        }
+                                ],
+                                msg: "",
+
+
+                        },
+                        methods: {
+                                app() {
+                                        this.list.push({
+                                                text: '学习 python'
+                                        })
+
+
+                                }
+                        }
+                })
+        </script>
+</body>
+
+</html>
